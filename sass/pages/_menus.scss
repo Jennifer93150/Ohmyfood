@@ -1,12 +1,12 @@
-.container-menu{
+.section-menu{
     position: relative;
     img{
         position: absolute;
         width: 100%;
     }
     
-    .menu{
-        background: white;
+    &__container{
+        background: rgb(240, 240, 240);
         border-radius: 40px 40px 0 0;
         margin-top: 225px;
         padding: 20px;
@@ -25,13 +25,45 @@
                 margin: 20px 20px 0;
             }
         }
-        &__entree{
+        
+        &-menu{
             &__h2{
-                border-bottom: 4px solid green;
+                border-bottom: 4px solid rgb(64, 218, 215);
                 font-weight: lighter;
                 text-transform: uppercase;
             }
+            &__ul{
+                list-style-type: none;
+                padding-left: 0;
+                    
+                &__li{
+                    background: white;
+                    border-radius: 15px;
+                    -webkit-box-shadow: 0px 10px 15px -8px grey; 
+                    box-shadow: 0px 10px 15px -8px grey;
+                    margin-bottom: 20px;
+                    padding: 12px 20px 12px 12px;
+                    &__h3{
+                        margin: 0 0 5px;
+                    }
+                    &__div{
+                        display: flex;
+                            align-items: baseline;
+                            flex-direction: row;
+                        &__p{
+                            font-weight: lighter;
+                            margin: 0;
+                            flex: 1;
+                        }
+                        &__span{
+                            margin-left: 30px;
+                        }
+                    }
+                    
+                }
+            }
         }
+        
 
     }
 }
