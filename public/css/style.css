@@ -11,13 +11,31 @@ body {
   font-family: "Roboto", sans-serif;
 }
 
+h1 {
+  font-size: 35px;
+  font-family: "Shrikhand", cursive;
+}
+
 h2 {
-  font-size: 30px;
+  font-size: 27px;
 }
 
 a {
   color: black;
   text-decoration: none;
+}
+
+.exploration__btn {
+  background: linear-gradient(#FF79DA, #9356DC);
+  border: none;
+  border-radius: 50px;
+  -webkit-box-shadow: 0px 27px 50px -8px grey;
+  box-shadow: 0px 17px 30px -8px grey;
+  color: white;
+  font-size: 18px;
+  height: 60px;
+  margin: 20px 0 30px;
+  padding: 20px 25px;
 }
 
 header {
@@ -59,21 +77,10 @@ nav {
   font-size: 20px;
   font-weight: lighter;
 }
-.exploration__btn {
-  background: linear-gradient(#FF79DA, #9356DC);
-  border: none;
-  border-radius: 50px;
-  -webkit-box-shadow: 0px 27px 50px -8px grey;
-  box-shadow: 0px 17px 30px -8px grey;
-  color: white;
-  font-size: 18px;
-  height: 60px;
-  margin: 20px 0 30px;
-  padding: 20px 25px;
-}
 
 .functioning {
   background: white;
+  padding-bottom: 50px;
 }
 .functioning ul {
   padding-left: 10px;
@@ -112,6 +119,10 @@ nav {
 
 .restaurants {
   margin: 20px;
+  padding-bottom: 50px;
+}
+.restaurants__h2 {
+  margin-top: 50px;
 }
 .restaurants__card {
   border-radius: 20px;
@@ -161,10 +172,47 @@ nav {
   font-family: "Shrikhand", cursive;
 }
 .footer__ul {
-  font-size: 18px;
+  font-size: 16px;
   line-height: 30px;
   list-style-type: none;
   padding: 0;
+}
+.footer__strong {
+  margin-left: 12px;
+}
+
+.container-menu {
+  position: relative;
+}
+.container-menu img {
+  position: absolute;
+  width: 100%;
+}
+.container-menu .menu {
+  background: white;
+  border-radius: 40px 40px 0 0;
+  margin-top: 225px;
+  padding: 20px;
+  position: absolute;
+  width: 100%;
+}
+.container-menu .menu__container-title {
+  display: flex;
+  flex-direction: row;
+  align-items: baseline;
+}
+.container-menu .menu__container-title__h1 {
+  flex: 1;
+}
+.container-menu .menu__container-title .fa-heart {
+  font-size: 30px;
+  font-weight: 100;
+  margin: 20px 20px 0;
+}
+.container-menu .menu__entree__h2 {
+  border-bottom: 4px solid green;
+  font-weight: lighter;
+  text-transform: uppercase;
 }
 
 /*# sourceMappingURL=style.css.map */
