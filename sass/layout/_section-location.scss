@@ -1,0 +1,16 @@
+.location{
+    display: flex;
+        justify-content: center;
+        align-items: center;
+    height: 70px;
+    margin-top: 2px;
+
+    .fa-map-marker-alt{
+        font-size: 20px;
+    }
+    &__p{
+        font-size: 18px;
+        font-weight: bolder;
+        margin-left: 18px;
+    }
+}

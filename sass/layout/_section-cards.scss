@@ -1,0 +1,44 @@
+.restaurants{
+    margin: 20px;
+    
+    &__card{
+        border-radius: 20px;
+        margin-top: 20px;
+        & img{
+            border-radius: 20px 20px 0px 0px;
+            object-fit: cover; 
+            height: 200px; 
+            width: 100%
+        }
+        &-container-text{
+            border-radius: 0 0 20px 20px;
+            -webkit-box-shadow: 0px 10px 15px -8px grey; 
+            box-shadow: 0px 10px 15px -8px grey;
+            display: flex;
+                flex-direction: row;
+            padding: 0px 20px;
+        }
+        &-text{
+            flex: 1;
+        }
+        &-h3{
+            font-size: 22px;
+            margin-bottom: 0;
+        }
+        &-p{
+            font-size: 18px;
+            font-weight: lighter;
+            margin-top: 10px;
+        }
+        .fa-heart{
+            font-size: 30px;
+            margin: 25px 20px;
+        }
+        .fa-heart:hover{
+            color: linear-gradient(blue, red);
+        }
+    }
+    
+    
+}
+
