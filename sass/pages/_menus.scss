@@ -33,12 +33,22 @@
             &__ul{
                 list-style-type: none;
                 padding-left: 0;
+                @media (min-width: map-get($map: $breakpoints, $key: tablet)){
+                    display: flex;
+                    justify-content: space-around;
+                }
                 &__li{
                     background: white;
                     border-radius: 15px;
                     @include box-shadow;
                     margin-bottom: $padd-20;
                     padding: 12px $padd-20 12px 12px;
+                    @media (min-width: map-get($map: $breakpoints, $key: tablet)){
+                        height: 150px;
+                        padding: $padd-20;
+                        margin: 10px;
+                        width: 33%;
+                    }
                     &__h3{
                         margin: 0 0 5px;
                     }
@@ -52,12 +62,16 @@
                         }
                         &__span{
                             margin-left: 30px;
+                            @media (min-width: map-get($map: $breakpoints, $key: tablet)){
+                                font-size: 22px;
+                            }
                         }
                     }
                 }
                 .last-li{
                     margin-bottom: 50px;
                 }
+                
             }
         }
     }

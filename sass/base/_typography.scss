@@ -1,4 +1,6 @@
- body {
+@import "../utils/variables";
+ 
+body {
     font-family: 'Roboto', sans-serif;
 }
 h1{
@@ -7,6 +9,9 @@ h1{
 }
 h2{
     font-size: 26px;
+    @media (min-width: map-get($map: $breakpoints, $key: tablet)){
+        font-size: 30px;
+    }
 }
 a{
     color: black;

@@ -7,13 +7,20 @@
     &__h3{
         font-size: 22px;
         font-family: 'Shrikhand', cursive;
+        @media (min-width: 768px){
+            font-size: 30px;
+            text-align: center;        
+        }
     }
     &__ul{
         font-size: 18px;
         line-height: 30px;
         list-style-type: none;
         padding: 0;
-        
+        @media (min-width: 768px){
+            display: flex;    
+            justify-content: space-around;        
+        }
     }
     &__strong{
         margin-left: 12px;

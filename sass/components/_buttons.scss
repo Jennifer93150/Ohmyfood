@@ -15,7 +15,6 @@
     opacity: 1;
     transition: opacity 250ms;
     &:hover{
-        opacity: 0.8;
         @include hover-dark-shadow;
     }
 }

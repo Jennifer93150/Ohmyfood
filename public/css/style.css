@@ -21,6 +21,11 @@ h1 {
 h2 {
   font-size: 26px;
 }
+@media (min-width: 768px) {
+  h2 {
+    font-size: 30px;
+  }
+}
 
 a {
   color: black;
@@ -29,7 +34,7 @@ a {
 
 /* Ombre des éléments */
 /* Augmente l'assombrissement de la couleur de l'ombre au survol*/
-/* Display flex row pour */
+/* Display flex row */
 .btn {
   background: linear-gradient(#FF79DA, #9356DC);
   border: none;
@@ -46,8 +51,8 @@ a {
   transition: opacity 250ms;
 }
 .btn:hover {
-  opacity: 0.8;
-  box-shadow: 0px 10px 35px -18px rgba(52, 52, 52, 0.606);
+  box-shadow: 0px 10px 35px -18px black;
+  transition: box-shadow 400ms;
 }
 
 .btn-menus {
@@ -56,7 +61,7 @@ a {
 
 /* Ombre des éléments */
 /* Augmente l'assombrissement de la couleur de l'ombre au survol*/
-/* Display flex row pour */
+/* Display flex row */
 header {
   background: #e4e4e4;
 }
@@ -70,6 +75,11 @@ header {
   height: 65px;
   padding: 25px 20px 15px 20px;
 }
+@media (min-width: 768px) {
+  .nav-bar {
+    height: 80px;
+  }
+}
 .nav-bar .a-return {
   flex: 0.5;
 }
@@ -80,6 +90,11 @@ header {
 .nav-bar img {
   flex: 2;
   height: 30px;
+}
+@media (min-width: 768px) {
+  .nav-bar img {
+    height: 50px;
+  }
 }
 
 .nav-bar-home {
@@ -123,6 +138,12 @@ header {
 .fonctionnement ul {
   padding-left: 10px;
 }
+@media (min-width: 768px) {
+  .fonctionnement ul {
+    display: flex;
+    justify-content: center;
+  }
+}
 .fonctionnement__li {
   position: relative;
   background: #f4f4f4;
@@ -134,7 +155,13 @@ header {
   align-items: center;
   height: 80px;
   margin: 20px 0;
-  /* Verification fonctionnement mixin - ne marche pas sur les boutons voir pq */
+}
+@media (min-width: 768px) {
+  .fonctionnement__li {
+    height: 150px;
+    margin: 20px 15px;
+    width: 33%;
+  }
 }
 .fonctionnement__span {
   position: absolute;
@@ -158,20 +185,34 @@ header {
 .fonctionnement__strong {
   flex: 3;
   font-size: 18px;
-  margin-left: px;
+  margin-left: 15px;
 }
 
 /* Ombre des éléments */
 /* Augmente l'assombrissement de la couleur de l'ombre au survol*/
-/* Display flex row pour */
+/* Display flex row */
 .restaurants {
   background: rgba(249, 249, 249, 0.482);
   padding: 40px 20px 50px;
+  /* css uniquement à partir du mode tablette*/
+}
+@media (min-width: 768px) {
+  .restaurants .flex-cards-768 {
+    display: flex;
+    justify-content: space-around;
+  }
 }
 .restaurants__card {
   background: white;
   border-radius: 20px;
   margin-bottom: 20px;
+  -webkit-box-shadow: 0px 10px 35px -18px rgba(128, 128, 128, 0.606);
+  box-shadow: 0px 10px 35px -18px rgba(128, 128, 128, 0.606);
+}
+@media (min-width: 768px) {
+  .restaurants__card {
+    width: 24%;
+  }
 }
 .restaurants__card img {
   border-radius: 20px 20px 0 0;
@@ -181,11 +222,14 @@ header {
 }
 .restaurants__card-container-text {
   border-radius: 0 0 20px 20px;
-  -webkit-box-shadow: 0px 10px 35px -18px rgba(128, 128, 128, 0.606);
-  box-shadow: 0px 10px 35px -18px rgba(128, 128, 128, 0.606);
   display: flex;
   flex-direction: row;
   padding: 0px 20px;
+}
+@media (min-width: 768px) {
+  .restaurants__card-container-text {
+    padding: 0px 10px;
+  }
 }
 .restaurants__card-text {
   flex: 1;
@@ -199,18 +243,23 @@ header {
   font-weight: lighter;
   margin-top: 8px;
 }
+@media (min-width: 768px) {
+  .restaurants__card-p {
+    font-size: 17px;
+  }
+}
 .restaurants__card .fa-heart {
   font-size: 30px;
   margin: 20px 10px;
+  transition: all 300ms ease-in-out;
 }
-.restaurants__card .fa-heart:active {
-  transition: all 600ms ease-in-out;
+.restaurants__card .fa-heart:hover {
   color: #9356DC;
 }
 
 /* Ombre des éléments */
 /* Augmente l'assombrissement de la couleur de l'ombre au survol*/
-/* Display flex row pour */
+/* Display flex row */
 .section-menu {
   position: relative;
 }
@@ -246,6 +295,12 @@ header {
   list-style-type: none;
   padding-left: 0;
 }
+@media (min-width: 768px) {
+  .section-menu__container-menu__ul {
+    display: flex;
+    justify-content: space-around;
+  }
+}
 .section-menu__container-menu__ul__li {
   background: white;
   border-radius: 15px;
@@ -253,6 +308,14 @@ header {
   box-shadow: 0px 10px 35px -18px rgba(128, 128, 128, 0.606);
   margin-bottom: 20px;
   padding: 12px 20px 12px 12px;
+}
+@media (min-width: 768px) {
+  .section-menu__container-menu__ul__li {
+    height: 150px;
+    padding: 20px;
+    margin: 10px;
+    width: 33%;
+  }
 }
 .section-menu__container-menu__ul__li__h3 {
   margin: 0 0 5px;
@@ -270,6 +333,11 @@ header {
 .section-menu__container-menu__ul__li__div__span {
   margin-left: 30px;
 }
+@media (min-width: 768px) {
+  .section-menu__container-menu__ul__li__div__span {
+    font-size: 22px;
+  }
+}
 .section-menu__container-menu__ul .last-li {
   margin-bottom: 50px;
 }
@@ -283,11 +351,23 @@ header {
   font-size: 22px;
   font-family: "Shrikhand", cursive;
 }
+@media (min-width: 768px) {
+  .footer__h3 {
+    font-size: 30px;
+    text-align: center;
+  }
+}
 .footer__ul {
   font-size: 18px;
   line-height: 30px;
   list-style-type: none;
   padding: 0;
+}
+@media (min-width: 768px) {
+  .footer__ul {
+    display: flex;
+    justify-content: space-around;
+  }
 }
 .footer__strong {
   margin-left: 12px;

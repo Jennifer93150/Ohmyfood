@@ -11,17 +11,22 @@ header{
         align-items: center;
     height: 65px;
     padding: 25px 20px 15px 20px;
+    @media (min-width: 768px){
+        height: 80px;        
+    }
     .a-return{
         flex: 0.5;
     }
     .fa-arrow-left{
-        
         font-size: 20px;
         padding-bottom: 8px;
     }
     img{
        flex: 2;
        height: 30px;
+       @media (min-width: 768px){
+        height: 50px;        
+       }
     }
 }
 .nav-bar-home{

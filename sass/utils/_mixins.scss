@@ -1,4 +1,5 @@
 @import "./variables";
+
 /* Ombre des éléments */
 @mixin box-shadow{
     -webkit-box-shadow: $shadow-size $shadow-colour; 
@@ -6,9 +7,10 @@
 }
 /* Augmente l'assombrissement de la couleur de l'ombre au survol*/
 @mixin hover-dark-shadow{
-    box-shadow: $shadow-size darken($shadow-colour, 30%);
+    box-shadow: $shadow-size black;
+    transition: box-shadow 400ms;
 }
-/* Display flex row pour */
+/* Display flex row */
 @mixin flex-row{
     display: flex;
         flex-direction: row;
