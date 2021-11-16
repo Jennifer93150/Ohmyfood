@@ -1,55 +1,50 @@
+@import "../utils/variables";
+@import "../utils/_mixins";
+
 .section-menu{
     position: relative;
     img{
         position: absolute;
         width: 100%;
     }
-    
     &__container{
         background: rgb(240, 240, 240);
         border-radius: 40px 40px 0 0;
         margin-top: 225px;
-        padding: 20px;
+        padding: $padd-20;
         position: absolute;
         width: 100%;
-        &__container-title{
-            display: flex;
-            flex-direction: row;
-            align-items: baseline;
-            &__h1{
-                flex: 1;
-            }
+        &-title{
+            @include flex-row;
+                align-items: baseline;
             .fa-heart{
                 font-size: 30px;
                 font-weight: 100;
-                margin: 20px 20px 0;
+                margin: $padd-20 0 0 55px;
             }
         }
-        
         &-menu{
             &__h2{
                 border-bottom: 4px solid rgb(64, 218, 215);
+                font-size: 20px;
                 font-weight: lighter;
                 text-transform: uppercase;
             }
             &__ul{
                 list-style-type: none;
                 padding-left: 0;
-                    
                 &__li{
                     background: white;
                     border-radius: 15px;
-                    -webkit-box-shadow: 0px 10px 15px -8px grey; 
-                    box-shadow: 0px 10px 15px -8px grey;
-                    margin-bottom: 20px;
-                    padding: 12px 20px 12px 12px;
+                    @include box-shadow;
+                    margin-bottom: $padd-20;
+                    padding: 12px $padd-20 12px 12px;
                     &__h3{
                         margin: 0 0 5px;
                     }
                     &__div{
-                        display: flex;
+                        @include flex-row;
                             align-items: baseline;
-                            flex-direction: row;
                         &__p{
                             font-weight: lighter;
                             margin: 0;
@@ -59,11 +54,11 @@
                             margin-left: 30px;
                         }
                     }
-                    
+                }
+                .last-li{
+                    margin-bottom: 50px;
                 }
             }
         }
-        
-
     }
 }

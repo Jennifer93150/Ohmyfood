@@ -1,14 +1,24 @@
-@import "../utils/_variables.scss";
+@import "../utils/_variables";
+@import "../utils/_mixins";
 
-.exploration__btn{
-    background: linear-gradient($color-secondary, $color-primary);;
+.btn{
+    background: linear-gradient($color-secondary, $color-primary);
     border: none;
     border-radius: 50px;
-    -webkit-box-shadow: 0px 27px 50px -8px grey; 
-    box-shadow: 0px 17px 30px -8px grey;
+    @include box-shadow;
     color: white;
+    display: block;
     font-size: 18px;
-    height: 60px;
-    margin: 20px 0 30px;
-    padding: 20px 25px;
+    height: 55px;
+    margin: auto;
+    width: 70%;
+    opacity: 1;
+    transition: opacity 250ms;
+    &:hover{
+        opacity: 0.8;
+        @include hover-dark-shadow;
+    }
+}
+.btn-menus{
+    width: 50%;
 }

@@ -1,0 +1,48 @@
+@import "../utils/_variables";
+
+.fonctionnement{
+    background: white;
+    padding: 40px $padd-20 50px;
+    ul{
+        padding-left: 10px;
+    }
+    &__li{
+        position: relative;
+        background: rgb(244, 244, 244);
+        border-radius: $padd-20;
+        @include box-shadow;
+        display: flex;
+        justify-content: center;
+            align-items: center;
+        height: 80px;
+        margin: $padd-20 0;
+        /* Verification fonctionnement mixin - ne marche pas sur les boutons voir pq */
+        // &:hover{
+        //     @include hover-dark-shadow;
+        // }
+    }
+    &__span{
+        position: absolute;
+        left: -10px;
+        background: $color-primary;
+        border-radius: 100%;
+        color: white;
+        display: flex;
+            justify-content: center;
+            align-items: center;
+        height: 30px;
+        width: 30px;
+        margin-right: 25px;   
+    }
+    .fa-mobile-alt, .fa-list-ul, .fa-store{
+        flex: 0.5;
+        color: grey;
+        font-size: 23px;
+        margin-left: 45px;
+    }
+    &__strong{
+        flex: 3;
+        font-size: 18px;
+        margin-left: px;
+    }
+}

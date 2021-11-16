@@ -1,13 +1,15 @@
+@import "../utils/_variables";
+
 .footer{
     background: rgb(48, 48, 48);
     color: white;
-    padding: 20px 25px;
+    padding: $padd-20 25px;
     &__h3{
         font-size: 22px;
         font-family: 'Shrikhand', cursive;
     }
     &__ul{
-        font-size: 16px;
+        font-size: 18px;
         line-height: 30px;
         list-style-type: none;
         padding: 0;

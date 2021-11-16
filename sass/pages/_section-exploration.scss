@@ -1,0 +1,15 @@
+@import "../utils/variables";
+
+.exploration{
+    background: $bg-explo-resto;
+    padding: 35px 35px 65px;
+    text-align: center;
+    &__h2{
+        padding: 0 15px;
+    }
+    &__p{
+        font-size: 20px;
+        font-weight: lighter;
+        padding-bottom: 15px;
+    }
+}

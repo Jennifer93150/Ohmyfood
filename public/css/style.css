@@ -1,9 +1,11 @@
+@charset "UTF-8";
 * {
   box-sizing: border-box;
 }
 
 .body {
-  background: #e4e4e4;
+  background: rgba(223, 223, 223, 0.592);
+  letter-spacing: 0.35px;
   margin: 0;
 }
 
@@ -12,12 +14,12 @@ body {
 }
 
 h1 {
-  font-size: 35px;
+  font-size: 30px;
   font-family: "Shrikhand", cursive;
 }
 
 h2 {
-  font-size: 27px;
+  font-size: 26px;
 }
 
 a {
@@ -25,81 +27,118 @@ a {
   text-decoration: none;
 }
 
-.exploration__btn {
+/* Ombre des éléments */
+/* Augmente l'assombrissement de la couleur de l'ombre au survol*/
+/* Display flex row pour */
+.btn {
   background: linear-gradient(#FF79DA, #9356DC);
   border: none;
   border-radius: 50px;
-  -webkit-box-shadow: 0px 27px 50px -8px grey;
-  box-shadow: 0px 17px 30px -8px grey;
+  -webkit-box-shadow: 0px 10px 35px -18px rgba(128, 128, 128, 0.606);
+  box-shadow: 0px 10px 35px -18px rgba(128, 128, 128, 0.606);
   color: white;
+  display: block;
   font-size: 18px;
-  height: 60px;
-  margin: 20px 0 30px;
-  padding: 20px 25px;
+  height: 55px;
+  margin: auto;
+  width: 70%;
+  opacity: 1;
+  transition: opacity 250ms;
+}
+.btn:hover {
+  opacity: 0.8;
+  box-shadow: 0px 10px 35px -18px rgba(52, 52, 52, 0.606);
 }
 
+.btn-menus {
+  width: 50%;
+}
+
+/* Ombre des éléments */
+/* Augmente l'assombrissement de la couleur de l'ombre au survol*/
+/* Display flex row pour */
 header {
   background: #e4e4e4;
 }
 
-nav {
+.nav-bar {
   background: white;
-  -webkit-box-shadow: 0px 0px 14px -1px grey;
-  box-shadow: 0px 0px 14px -1px grey;
+  -webkit-box-shadow: 0px 10px 35px -18px rgba(128, 128, 128, 0.606);
+  box-shadow: 0px 10px 35px -18px rgba(128, 128, 128, 0.606);
   display: flex;
-  justify-content: center;
-  height: 75px;
-  padding-top: 25px;
+  align-items: center;
+  height: 65px;
+  padding: 25px 20px 15px 20px;
+}
+.nav-bar .a-return {
+  flex: 0.5;
+}
+.nav-bar .fa-arrow-left {
+  font-size: 20px;
+  padding-bottom: 8px;
+}
+.nav-bar img {
+  flex: 2;
+  height: 30px;
 }
 
-.location {
+.nav-bar-home {
+  justify-content: center;
+}
+
+.localisation {
   display: flex;
   justify-content: center;
   align-items: center;
   height: 70px;
   margin-top: 2px;
 }
-.location .fa-map-marker-alt {
+.localisation .fa-map-marker-alt {
   font-size: 20px;
 }
-.location__p {
+.localisation__p {
   font-size: 18px;
   font-weight: bolder;
   margin-left: 18px;
 }
 
 .exploration {
-  background: #f4f4f4;
-  padding: 35px;
+  background: rgba(249, 249, 249, 0.482);
+  padding: 35px 35px 65px;
   text-align: center;
+}
+.exploration__h2 {
+  padding: 0 15px;
 }
 .exploration__p {
   font-size: 20px;
   font-weight: lighter;
+  padding-bottom: 15px;
 }
 
-.functioning {
+.fonctionnement {
   background: white;
-  padding-bottom: 50px;
+  padding: 40px 20px 50px;
 }
-.functioning ul {
+.fonctionnement ul {
   padding-left: 10px;
 }
-.functioning__h2 {
-  margin: 0 0 0 20px;
-  padding: 40px 0 20px 0;
-}
-.functioning__li {
+.fonctionnement__li {
+  position: relative;
   background: #f4f4f4;
   border-radius: 20px;
-  -webkit-box-shadow: 0px 10px 15px -8px grey;
-  box-shadow: 0px 10px 15px -8px grey;
+  -webkit-box-shadow: 0px 10px 35px -18px rgba(128, 128, 128, 0.606);
+  box-shadow: 0px 10px 35px -18px rgba(128, 128, 128, 0.606);
   display: flex;
+  justify-content: center;
   align-items: center;
   height: 80px;
-  margin: 20px;
+  margin: 20px 0;
+  /* Verification fonctionnement mixin - ne marche pas sur les boutons voir pq */
 }
-.functioning__span {
+.fonctionnement__span {
+  position: absolute;
+  left: -10px;
   background: #9356DC;
   border-radius: 100%;
   color: white;
@@ -110,34 +149,40 @@ nav {
   width: 30px;
   margin-right: 25px;
 }
-.functioning .fa-mobile-alt, .functioning .fa-list-ul, .functioning .fa-store {
-  font-size: 25px;
+.fonctionnement .fa-mobile-alt, .fonctionnement .fa-list-ul, .fonctionnement .fa-store {
+  flex: 0.5;
+  color: grey;
+  font-size: 23px;
+  margin-left: 45px;
 }
-.functioning__em {
-  margin-left: 25px;
+.fonctionnement__strong {
+  flex: 3;
+  font-size: 18px;
+  margin-left: px;
 }
 
+/* Ombre des éléments */
+/* Augmente l'assombrissement de la couleur de l'ombre au survol*/
+/* Display flex row pour */
 .restaurants {
-  margin: 20px;
-  padding-bottom: 50px;
-}
-.restaurants__h2 {
-  margin-top: 50px;
+  background: rgba(249, 249, 249, 0.482);
+  padding: 40px 20px 50px;
 }
 .restaurants__card {
+  background: white;
   border-radius: 20px;
-  margin-top: 20px;
+  margin-bottom: 20px;
 }
 .restaurants__card img {
-  border-radius: 20px 20px 0px 0px;
+  border-radius: 20px 20px 0 0;
   object-fit: cover;
   height: 200px;
   width: 100%;
 }
 .restaurants__card-container-text {
   border-radius: 0 0 20px 20px;
-  -webkit-box-shadow: 0px 10px 15px -8px grey;
-  box-shadow: 0px 10px 15px -8px grey;
+  -webkit-box-shadow: 0px 10px 35px -18px rgba(128, 128, 128, 0.606);
+  box-shadow: 0px 10px 35px -18px rgba(128, 128, 128, 0.606);
   display: flex;
   flex-direction: row;
   padding: 0px 20px;
@@ -146,41 +191,26 @@ nav {
   flex: 1;
 }
 .restaurants__card-h3 {
-  font-size: 22px;
-  margin-bottom: 0;
+  font-size: 20px;
+  margin: 15px 0 0;
 }
 .restaurants__card-p {
-  font-size: 18px;
+  font-size: 20px;
   font-weight: lighter;
-  margin-top: 10px;
+  margin-top: 8px;
 }
 .restaurants__card .fa-heart {
   font-size: 30px;
-  margin: 25px 20px;
+  margin: 20px 10px;
 }
-.restaurants__card .fa-heart:hover {
-  color: linear-gradient(blue, red);
-}
-
-.footer {
-  background: #303030;
-  color: white;
-  padding: 20px 25px;
-}
-.footer__h3 {
-  font-size: 22px;
-  font-family: "Shrikhand", cursive;
-}
-.footer__ul {
-  font-size: 16px;
-  line-height: 30px;
-  list-style-type: none;
-  padding: 0;
-}
-.footer__strong {
-  margin-left: 12px;
+.restaurants__card .fa-heart:active {
+  transition: all 600ms ease-in-out;
+  color: #9356DC;
 }
 
+/* Ombre des éléments */
+/* Augmente l'assombrissement de la couleur de l'ombre au survol*/
+/* Display flex row pour */
 .section-menu {
   position: relative;
 }
@@ -196,21 +226,19 @@ nav {
   position: absolute;
   width: 100%;
 }
-.section-menu__container__container-title {
+.section-menu__container-title {
   display: flex;
   flex-direction: row;
   align-items: baseline;
 }
-.section-menu__container__container-title__h1 {
-  flex: 1;
-}
-.section-menu__container__container-title .fa-heart {
+.section-menu__container-title .fa-heart {
   font-size: 30px;
   font-weight: 100;
-  margin: 20px 20px 0;
+  margin: 20px 0 0 55px;
 }
 .section-menu__container-menu__h2 {
   border-bottom: 4px solid #40dad7;
+  font-size: 20px;
   font-weight: lighter;
   text-transform: uppercase;
 }
@@ -221,8 +249,8 @@ nav {
 .section-menu__container-menu__ul__li {
   background: white;
   border-radius: 15px;
-  -webkit-box-shadow: 0px 10px 15px -8px grey;
-  box-shadow: 0px 10px 15px -8px grey;
+  -webkit-box-shadow: 0px 10px 35px -18px rgba(128, 128, 128, 0.606);
+  box-shadow: 0px 10px 35px -18px rgba(128, 128, 128, 0.606);
   margin-bottom: 20px;
   padding: 12px 20px 12px 12px;
 }
@@ -231,8 +259,8 @@ nav {
 }
 .section-menu__container-menu__ul__li__div {
   display: flex;
-  align-items: baseline;
   flex-direction: row;
+  align-items: baseline;
 }
 .section-menu__container-menu__ul__li__div__p {
   font-weight: lighter;
@@ -241,6 +269,28 @@ nav {
 }
 .section-menu__container-menu__ul__li__div__span {
   margin-left: 30px;
+}
+.section-menu__container-menu__ul .last-li {
+  margin-bottom: 50px;
+}
+
+.footer {
+  background: #303030;
+  color: white;
+  padding: 20px 25px;
+}
+.footer__h3 {
+  font-size: 22px;
+  font-family: "Shrikhand", cursive;
+}
+.footer__ul {
+  font-size: 18px;
+  line-height: 30px;
+  list-style-type: none;
+  padding: 0;
+}
+.footer__strong {
+  margin-left: 12px;
 }
 
 /*# sourceMappingURL=style.css.map */

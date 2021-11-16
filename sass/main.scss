@@ -1,15 +1,16 @@
 @import "./base/_base";
 @import "./base/_typography";
 
-@import "./components/buttons";
+@import "./components/_buttons";
 
 @import "./layout/_header";
-@import "./layout/_section-location";
-@import "./layout/_section-exploration";
-@import "./layout/_section-functioning";
-@import "./layout/_section-cards";
-@import "./layout/_footer";
 
+@import "./pages/_section-localisation";
+@import "./pages/_section-exploration";
+@import "./pages/_section-fonctionnement";
+@import "./pages/_section-cards";
 @import "./pages/_menus";
+
+@import "./layout/_footer";
 
 

@@ -1,0 +1,47 @@
+@import "../utils/variables";
+@import "../utils/_mixins";
+
+.restaurants{
+    background: $bg-explo-resto;
+    padding: 40px $padd-20 50px;
+    &__card{
+        background: white;
+        border-radius: $padd-20;
+        margin-bottom: $padd-20;
+        & img{
+            border-radius: $padd-20 $padd-20 0 0;
+            object-fit: cover; 
+            height: 200px; 
+            width: 100%
+        }
+        &-container-text{
+            border-radius: 0 0 $padd-20 $padd-20;
+            @include box-shadow;
+            @include flex-row;
+            padding: 0px $padd-20;
+        }
+        &-text{
+            flex: 1;
+        }
+        &-h3{
+            font-size: 20px;
+            margin: 15px 0 0;
+        }
+        &-p{
+            font-size: 20px;
+            font-weight: lighter;
+            margin-top: 8px;
+        }
+        .fa-heart{
+            font-size: 30px;
+            margin: $padd-20 10px;
+            &:active{
+                transition: all 600ms ease-in-out;
+                color: $color-primary;
+                
+            }
+
+        }
+    }
+}
+
