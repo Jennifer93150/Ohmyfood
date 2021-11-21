@@ -2,11 +2,11 @@
 
  
  $size: 20px;
- $anim-dur: 1s;
+ $anim-dur: 300ms;
  $anim-delay: $anim-dur / 5;
-
+ 
  .container__load{
-    position: absolute;
+    position: fixed;
     z-index: 1;
     width: 100%;
     height: 100%;
@@ -26,18 +26,19 @@
             font-size: 20px;
             height: 100%;
             width: $size;
-            animation: bars $anim-dur backwards infinite;
+            animation: letters $anim-dur both infinite;
             animation-direction : alternate;
             @for $i from 1 through 10 {
                 &--#{$i} {
                     animation-delay: $anim-delay * $i;
+                    
                 }
             }
         }
     }
  }
  
- @keyframes bars {
+ @keyframes letters {
      0% {
          transform: scaleY(0.5);
      }
