@@ -48,14 +48,40 @@
                 font-size: 17px;
             }
         }
+        
         .fa-heart{
             font-size: 30px;
             margin: $padd-20 10px;
-            transition: all 300ms ease-in-out;
-            &:hover {
+            transition: all 800ms ease-in-out;
+            &:hover{
                 color: $color-primary;
+                
             }
         }
+        
+        // $clr-btn: #15DEA5;
+        // .fa-heart{
+        //     color: $clr-btn;
+        //     position: relative;
+        //     z-index: 1;
+        //     &:hover {
+        //         &::after {
+        //             opacity: 1;
+        //         }
+        //     }
+        //     &::after {
+        //         content: " ";
+        //         position: absolute;
+        //         top: 0;
+        //         right: 0;
+        //         bottom: 0;
+        //         left: 0;
+        //         color: $color-primary;
+        //         opacity: 0;
+        //         z-index: -1;
+        //         transition: opacity 250ms;
+        //     }
+        // }
     }
 }
 
