@@ -2,15 +2,17 @@
 @import "./base/_typography";
 
 @import "./components/_buttons";
+@import "./components/_heart";
 
 @import "./layout/_header";
+@import "./layout/_footer";
 
-@import "./pages/_home-load";
+@import "./pages/_loader";
 @import "./pages/_home-section-localisation";
 @import "./pages/_home-section-exploration";
 @import "./pages/_home-section-fonctionnement";
 @import "./pages/_home-section-cards";
 @import "./pages/_menus";
 
-@import "./layout/_footer";
+
 

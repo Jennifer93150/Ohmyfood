@@ -91,9 +91,15 @@
                             display: flex;
                                 flex: 100%;
                                 flex-direction: column;
-                            font-size: 20px;
+                            font-size: 18px;
                              @include ellipsis;
                             transition: all 600ms;
+                            @media (max-width: map-get($map: $breakpoints, $key: mobile-M)){
+                                font-size: 16px;
+                            }
+                            @media (max-width: map-get($map: $breakpoints, $key: mobile-S)){
+                                font-size: 15px;
+                            }
                             .name {
                                 @include ellipsis;
                                 padding: 10px 20px;
@@ -110,6 +116,12 @@
                                     font-size: 19px;
                                     font-weight: lighter;
                                     @include ellipsis;
+                                    @media (max-width: map-get($map: $breakpoints, $key: mobile-M)){
+                                        font-size: 16px;
+                                    }
+                                    @media (max-width: map-get($map: $breakpoints, $key: mobile-S)){
+                                        font-size: 14px;
+                                    }
                                 }
                                 .details__price {
                                     flex: 10%;
