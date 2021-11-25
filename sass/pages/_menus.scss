@@ -1,78 +1,163 @@
 @import "../utils/variables";
 @import "../utils/_mixins";
+@import "../utils/animations";
 
-.section-menu{
-    position: relative;
+.section-restaurant{
     img{
-        position: absolute;
+        object-fit: cover;
         width: 100%;
+        @media (min-width: map-get($map: $breakpoints, $key: tablet)){
+            height: 700px;
+        }
+    
     }
-    &__container{
-        background: rgb(240, 240, 240);
+    #img-note-enchantee{
+        height: 380px;
+        @media (min-width: map-get($map: $breakpoints, $key: tablet)){
+            height: 700px;
+        }
+    }
+    .restaurant{
+        background-color: #ebebeb;
         border-radius: 40px 40px 0 0;
-        margin-top: 225px;
-        padding: $padd-20;
-        position: absolute;
-        width: 100%;
-        &-title{
-            @include flex-row;
+        padding: 50px 20px;
+        transform: translateY(-80px);
+        @media (min-width: map-get($map: $breakpoints, $key: tablet)){
+            transform: translateY(-400px);
+        }
+        .restaurant-name {
+            display: flex;
+                justify-content: space-between;
                 align-items: baseline;
+            font-family: shrikhand, cursive;
+            font-size: 30px;
+            margin-bottom: 40px;
             .fa-heart{
-                font-size: 30px;
-                font-weight: 100;
-                margin: $padd-20 0 0 55px;
+                margin: 10px 10px;
             }
         }
-        &-menu{
-            &__h2{
-                border-bottom: 4px solid rgb(64, 218, 215);
-                font-size: 20px;
-                font-weight: lighter;
-                text-transform: uppercase;
-            }
-            &__ul{
-                list-style-type: none;
-                padding-left: 0;
-                @media (min-width: map-get($map: $breakpoints, $key: tablet)){
-                    display: flex;
-                    justify-content: space-around;
-                }
-                &__li{
-                    background: white;
-                    border-radius: 15px;
-                    @include box-shadow;
-                    margin-bottom: $padd-20;
-                    padding: 12px $padd-20 12px 12px;
-                    @media (min-width: map-get($map: $breakpoints, $key: tablet)){
-                        height: 150px;
-                        padding: $padd-20;
-                        margin: 10px;
-                        width: 33%;
-                    }
-                    &__h3{
-                        margin: 0 0 5px;
-                    }
-                    &__div{
-                        @include flex-row;
-                            align-items: baseline;
-                        &__p{
-                            font-weight: lighter;
-                            margin: 0;
-                            flex: 1;
-                        }
-                        &__span{
-                            margin-left: 30px;
-                            @media (min-width: map-get($map: $breakpoints, $key: tablet)){
-                                font-size: 22px;
-                            }
-                        }
-                    }
-                }
-                .last-li{
-                    margin-bottom: 50px;
-                }
+        /* Entree Plat Dessert */
+        .flex-menu{
+            @media (min-width: map-get($map: $breakpoints, $key: tablet)){
+                display: flex;
+                justify-content: space-between;
                 
             }
+            .menu-part{
+                @media (min-width: map-get($map: $breakpoints, $key: tablet)){
+                    width: 33%;
+                }
+                &__title{
+                    font-size: 20px;
+                    font-weight: lighter;
+                    margin-bottom: 10px;
+                    @include flex-row;
+                        align-items: baseline;
+                    text-transform: uppercase;
+                }
+                &__underline{
+                    background-color: $color-tertiary;
+                    height: 5px;
+                    width: 50px;
+                }
+                &__list{
+                    list-style-type: none;
+                    padding-left: 0;
+                    
+                    &__item{
+                        background: white;
+                        border-radius: 20px;
+                        @include box-shadow;
+                        cursor: pointer;
+                        display: flex;
+                            justify-content: space-between;
+                        height: 90px;
+                        margin: 18px 0;
+                        @include ellipsis;
+                        transition: all 2000ms;
+                        animation: appear-menu 2000ms both;
+                        @for $i from 1 through 9{
+                            &--#{$i}{
+                                animation-delay: 150ms * $i;
+                            }
+                        }
+                        &--10 {
+                            animation-delay: 1500ms;
+                        }
+                        @media (min-width: map-get($map: $breakpoints, $key: tablet)){
+                            width: 98%;
+                        }
+                        .item-text {
+                            display: flex;
+                                flex: 100%;
+                                flex-direction: column;
+                            font-size: 20px;
+                             @include ellipsis;
+                            transition: all 600ms;
+                            .name {
+                                @include ellipsis;
+                                padding: 10px 20px;
+                            }
+                            .details {
+                                display: flex;
+                                    align-items: center;
+                                    flex: 100%;
+                                    flex-direction: row;
+                                    justify-content: space-between;
+                                margin: 0 0 0 20px;
+                                .details__desc {
+                                    flex: 90%;
+                                    font-size: 19px;
+                                    font-weight: lighter;
+                                    @include ellipsis;
+                                }
+                                .details__price {
+                                    flex: 10%;
+                                    font-weight: bold;
+                                    text-align: end;
+                                }
+                            }
+                        }
+                        &:hover > .item-text {
+                            flex: 65%;
+                            margin-right: 20px;
+                        }
+                        /* partie verte à une taille de 0% ds la carte et est deplacé de 100px sur axe horizontal à droite*/
+                        .item-check {
+                            background-color: #99e2d0;
+                            border-radius: 0 15px 15px 0;
+                            color: #f6f6f6;
+                            display: flex;
+                                align-items: center;
+                                flex: 0%;
+                                justify-content: center;
+                            font-size: 30px;
+                            transform: translateX(100px);
+                            transition: all 600ms;
+                            // white-space: nowrap;
+                        }
+                        /* au survol de la carte, la partie verte reprend un taille(flex8%) et sa place ds la carte(translate)*/
+                        &:hover > .item-check {
+                            background-color: #99e2d0;
+                            cursor: pointer;
+                            color: #f6f6f6;
+                            flex: 8%;
+                            transform: translateX(0px);
+                        }
+                        .fa-check-circle {
+                            transform: rotate(380deg);
+                            transition: transform 600ms;
+                        }    
+                        &:hover .fa-check-circle {
+                            transform: rotate(0deg);
+                        }                
+                    }
+                    .last-li{
+                        margin-bottom: 50px;
+                    }               
+                }         
+            }      
         }
     }
 }
+

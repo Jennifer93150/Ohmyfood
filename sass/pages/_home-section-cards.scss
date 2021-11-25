@@ -4,6 +4,9 @@
 .restaurants{
     background: $bg-explo-resto;
     padding: 40px $padd-20 50px;
+    &__h2{
+        margin-bottom: 20px;
+    }
     /* css uniquement à partir du mode tablette*/
     .flex-cards-768{
         @media (min-width: map-get($map: $breakpoints, $key: tablet)){
@@ -43,7 +46,7 @@
         &-p{
             font-size: 20px;
             font-weight: lighter;
-            margin-top: 8px;
+            margin: 8px 0;
             @media (min-width: map-get($map: $breakpoints, $key: tablet)){
                 font-size: 17px;
             }
@@ -55,7 +58,6 @@
             transition: all 800ms ease-in-out;
             &:hover{
                 color: $color-primary;
-                
             }
         }
         

@@ -8,4 +8,4 @@ $padd-20:20px;
 $shadow-colour: rgba(111, 111, 111, 0.756);
 $shadow-size:0px 10px 35px -12px;
 
-$breakpoints:(tablet:768px)
+$breakpoints:(tablet:768px, mobile-M: 375px, mobile-S: 320px);

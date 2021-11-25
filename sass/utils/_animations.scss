@@ -1,0 +1,11 @@
+@keyframes appear-menu {
+    0% {
+        transform: translateY(-40px);
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0) cubic-bezier(.73,.01,.2,.99);
+    }
+}
+

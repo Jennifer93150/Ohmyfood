@@ -5,13 +5,12 @@
 
 @import "./layout/_header";
 
-@import "./pages/home";
-@import "./pages/_section-localisation";
-@import "./pages/_section-exploration";
-@import "./pages/_section-fonctionnement";
-@import "./pages/_section-cards";
+@import "./pages/_home-load";
+@import "./pages/_home-section-localisation";
+@import "./pages/_home-section-exploration";
+@import "./pages/_home-section-fonctionnement";
+@import "./pages/_home-section-cards";
 @import "./pages/_menus";
 
 @import "./layout/_footer";
-
 

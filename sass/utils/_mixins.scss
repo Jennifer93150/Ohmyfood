@@ -17,3 +17,9 @@
         flex-direction: row;
 }
 
+/* text ellispis */
+@mixin ellipsis{
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}

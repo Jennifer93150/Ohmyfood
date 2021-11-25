@@ -4,8 +4,14 @@ body {
     font-family: 'Roboto', sans-serif;
 }
 h1{
-    font-size: 30px;
+    font-size: 33px;
     font-family: 'Shrikhand', cursive;
+    @media (max-width: map-get($map: $breakpoints, $key: mobile-M)){
+        font-size: 29px;
+    }
+    @media (max-width: map-get($map: $breakpoints, $key: mobile-S)){
+        font-size: 23px;
+    }
 }
 h2{
     font-size: 26px;
