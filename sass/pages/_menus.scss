@@ -9,7 +9,6 @@
         @media (min-width: map-get($map: $breakpoints, $key: tablet)){
             height: 700px;
         }
-    
     }
     #img-note-enchantee{
         height: 380px;
@@ -74,7 +73,7 @@
                         height: 90px;
                         margin: 18px 0;
                         @include ellipsis;
-                        transition: all 2000ms;
+                        //transition: all 2000ms;
                         animation: appear-menu 2000ms both;
                         @for $i from 1 through 9{
                             &--#{$i}{

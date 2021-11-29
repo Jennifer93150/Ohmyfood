@@ -82,6 +82,38 @@ h2 {
 /* Augmente l'assombrissement de la couleur de l'ombre au survol*/
 /* Display flex row */
 /* text ellispis */
+@keyframes appear-menu {
+  0% {
+    transform: translateY(-40px);
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0) cubic-bezier(0.73, 0.01, 0.2, 0.99);
+  }
+}
+@keyframes heart {
+  0% {
+    opacity: 0;
+    transform: scale(5px);
+  }
+  25% {
+    opacity: 0.2;
+    transform: scale(10px);
+  }
+  50% {
+    opacity: 0.5;
+    transform: scale(20px);
+  }
+  75% {
+    opacity: 0.8;
+    transform: scale(27px);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(32px);
+  }
+}
 .container-heart {
   cursor: pointer;
   position: relative;
@@ -99,23 +131,13 @@ h2 {
 }
 .container-heart:hover .full-heart {
   background: -webkit-gradient(linear, left top, left bottom, from(#9356DC), to(#FF79DA));
-  background-clip: text;
-  color: -webkit-gradient(linear, left top, left bottom, from(#9356DC), to(#FF79DA));
-  opacity: 1;
-  transform: tanslateZ(12px) scale(32px);
-  transition: transform 300ms;
+  -webkit-background-clip: text;
+  color: transparent;
+  animation: heart 600ms cubic-bezier(0.57, 0, 0.21, 0.99) forwards;
 }
 .container-heart .full-heart {
   font-size: 28px;
   opacity: 0;
-  transform: tanslateZ(0px) scale(0px);
-  transition: transform 1000ms;
-}
-
-.test-heart {
-  background: -webkit-gradient(linear, left top, left bottom, from(#9356DC), to(#FF79DA));
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
 }
 
 /* Ombre des éléments */
@@ -357,6 +379,28 @@ header {
     transform: translateY(0) cubic-bezier(0.73, 0.01, 0.2, 0.99);
   }
 }
+@keyframes heart {
+  0% {
+    opacity: 0;
+    transform: scale(5px);
+  }
+  25% {
+    opacity: 0.2;
+    transform: scale(10px);
+  }
+  50% {
+    opacity: 0.5;
+    transform: scale(20px);
+  }
+  75% {
+    opacity: 0.8;
+    transform: scale(27px);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(32px);
+  }
+}
 .section-restaurant img {
   object-fit: cover;
   width: 100%;
@@ -439,7 +483,6 @@ header {
   white-space: nowrap;
   text-overflow: ellipsis;
   overflow: hidden;
-  transition: all 2000ms;
   animation: appear-menu 2000ms both;
   /* partie verte à une taille de 0% ds la carte et est deplacé de 100px sur axe horizontal à droite*/
   /* au survol de la carte, la partie verte reprend un taille(flex8%) et sa place ds la carte(translate)*/
