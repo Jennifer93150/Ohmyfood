@@ -1,23 +1,26 @@
 @import "./variables";
 
-
-/* Ombre des éléments */
 @mixin box-shadow{
     -webkit-box-shadow: $shadow-size $shadow-colour; 
     box-shadow: $shadow-size $shadow-colour;
 }
-/* Augmente l'assombrissement de la couleur de l'ombre au survol*/
+
 @mixin hover-dark-shadow{
+    -webkit-box-shadow: $shadow-size black;
     box-shadow: $shadow-size black;
     transition: box-shadow 400ms;
 }
-/* Display flex row */
+
 @mixin flex-row{
     display: flex;
         flex-direction: row;
 }
 
-/* text ellispis */
+@mixin flex-center{
+    display: flex;
+        justify-content: center;
+}
+
 @mixin ellipsis{
     white-space: nowrap;
     text-overflow: ellipsis;

@@ -3,12 +3,12 @@
 .exploration{
     background: $bg-explo-resto;
     padding: 35px 35px 65px;
-    text-align: center;
-    &__h2{
+    text-align: $center;
+    &__title{
         margin: 10px 0;
         padding: 0 15px;
     }
-    &__p{
+    &__text{
         font-size: 20px;
         font-weight: lighter;
         padding-bottom: 15px;

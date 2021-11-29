@@ -3,61 +3,61 @@
 
 .restaurants{
     background: $bg-explo-resto;
-    padding: 40px $padd-20 50px;
+    padding: 40px 20px 50px;
     &__h2{
         margin-bottom: 20px;
     }
     .flex-cards{
-        @media (min-width: map-get($map: $breakpoints, $key: tablet)){
+        @media (min-width: map-get($breakpoints, tablet)){
             display: flex;
                 justify-content: space-around;
         }
     }
     &__card{
         background: white;
-        border-radius: $padd-20;
+        border-radius: 20px;
         @include box-shadow;
-        margin-bottom: $padd-20;
+        margin-bottom: 20px;
         position: relative;
-        @media (min-width: map-get($map: $breakpoints, $key: tablet)){
+        @media (min-width: map-get($breakpoints, tablet)){
             width: 24%;
         }
         & img{
-            border-radius: $padd-20 $padd-20 0 0;
+            border-radius: 20px 20px 0 0;
             object-fit: cover; 
             height: 200px; 
             width: 100%
         }
         &-sticker{
             background: $color-tertiary;
-            color: darken($color: $color-tertiary, $amount: 40%);
+            color: darken($color-tertiary, 40%);
             padding: 8px;
-            text-align: center;
-            width: 90px;
             position: absolute;
-            top: 10px;
-            right: 10px;
+                top: 10px;
+                right: 10px;
+            text-align: $center;
+            width: 90px;
         }
         &-container-text{
-            border-radius: 0 0 $padd-20 $padd-20;
+            border-radius: 0 0 20px 20px;
             @include flex-row;
-            padding: 0px $padd-20;
-            @media (min-width: map-get($map: $breakpoints, $key: tablet)){
+            padding: 0px 20px;
+            @media (min-width: map-get($breakpoints, tablet)){
                 padding: 0px 10px;
             }
         }
         &-text{
             flex: 1;
         }
-        &-h3{
+        &-name{
             font-size: 20px;
             margin: 15px 0 0;
         }
-        &-p{
+        &-place{
             font-size: 20px;
             font-weight: lighter;
             margin: 8px 0;
-            @media (min-width: map-get($map: $breakpoints, $key: tablet)){
+            @media (min-width: map-get($breakpoints, tablet)){
                 font-size: 17px;
             }
         }

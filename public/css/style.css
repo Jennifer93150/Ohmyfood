@@ -1,4 +1,3 @@
-@charset "UTF-8";
 *, ::before, ::after {
   box-sizing: border-box;
   margin: 0;
@@ -48,10 +47,117 @@ h2 {
   text-decoration: none;
 }
 
-/* Ombre des éléments */
-/* Augmente l'assombrissement de la couleur de l'ombre au survol*/
-/* Display flex row */
-/* text ellispis */
+@keyframes letters {
+  0% {
+    transform: scaleY(0.5);
+  }
+  100% {
+    transform: scaleY(1);
+  }
+}
+@keyframes loader-stop {
+  0% {
+    opacity: 1;
+    z-index: 1;
+  }
+  100% {
+    opacity: 0;
+    z-index: -1;
+  }
+}
+@keyframes appear-menu {
+  0% {
+    transform: translateY(-40px);
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0) cubic-bezier(0.73, 0.01, 0.2, 0.99);
+  }
+}
+@keyframes heart {
+  0% {
+    opacity: 0;
+    transform: scale(5px);
+  }
+  25% {
+    opacity: 0.2;
+    transform: scale(10px);
+  }
+  50% {
+    opacity: 0.5;
+    transform: scale(20px);
+  }
+  75% {
+    opacity: 0.8;
+    transform: scale(27px);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(32px);
+  }
+}
+.container__load {
+  position: fixed;
+  z-index: 1;
+  width: 100%;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.921);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  animation-name: loader-stop;
+  animation-duration: 1s;
+  animation-delay: 3s;
+  animation-fill-mode: forwards;
+}
+.container__load .load {
+  height: 150px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+.container__load .load__letter {
+  margin: 5px;
+  color: #9356DC;
+  font-size: 20px;
+  height: 100%;
+  width: 20px;
+  animation: letters 300ms 3s both infinite;
+  animation-direction: alternate;
+}
+.container__load .load__letter--1 {
+  animation-delay: 60ms;
+}
+.container__load .load__letter--2 {
+  animation-delay: 120ms;
+}
+.container__load .load__letter--3 {
+  animation-delay: 180ms;
+}
+.container__load .load__letter--4 {
+  animation-delay: 240ms;
+}
+.container__load .load__letter--5 {
+  animation-delay: 300ms;
+}
+.container__load .load__letter--6 {
+  animation-delay: 360ms;
+}
+.container__load .load__letter--7 {
+  animation-delay: 420ms;
+}
+.container__load .load__letter--8 {
+  animation-delay: 480ms;
+}
+.container__load .load__letter--9 {
+  animation-delay: 540ms;
+}
+.container__load .load__letter--10 {
+  animation-delay: 600ms;
+}
+
 .btn {
   background: linear-gradient(#FF79DA, #9356DC);
   border: none;
@@ -70,6 +176,7 @@ h2 {
 }
 .btn:hover {
   opacity: 0.7;
+  -webkit-box-shadow: 0px 10px 35px -12px black;
   box-shadow: 0px 10px 35px -12px black;
   transition: box-shadow 400ms;
 }
@@ -78,10 +185,24 @@ h2 {
   width: 250px;
 }
 
-/* Ombre des éléments */
-/* Augmente l'assombrissement de la couleur de l'ombre au survol*/
-/* Display flex row */
-/* text ellispis */
+@keyframes letters {
+  0% {
+    transform: scaleY(0.5);
+  }
+  100% {
+    transform: scaleY(1);
+  }
+}
+@keyframes loader-stop {
+  0% {
+    opacity: 1;
+    z-index: 1;
+  }
+  100% {
+    opacity: 0;
+    z-index: -1;
+  }
+}
 @keyframes appear-menu {
   0% {
     transform: translateY(-40px);
@@ -140,10 +261,6 @@ h2 {
   opacity: 0;
 }
 
-/* Ombre des éléments */
-/* Augmente l'assombrissement de la couleur de l'ombre au survol*/
-/* Display flex row */
-/* text ellispis */
 header {
   background: #e4e4e4;
 }
@@ -188,18 +305,18 @@ header {
   color: white;
   padding: 35px 35px;
 }
-.footer__h3 {
+.footer__logo {
   font-size: 22px;
   font-family: "Shrikhand", cursive;
 }
-.footer__ul {
+.footer__liste {
   font-size: 18px;
   line-height: 30px;
   list-style-type: none;
   padding: 0;
 }
-.footer__strong {
-  margin-left: 12px;
+.footer__liste .fa-utensils, .footer__liste .fa-hands-helping {
+  margin-right: 12px;
 }
 
 .localisation {
@@ -212,7 +329,7 @@ header {
 .localisation .fa-map-marker-alt {
   font-size: 20px;
 }
-.localisation__p {
+.localisation__text {
   font-size: 18px;
   font-weight: bolder;
   margin-left: 18px;
@@ -223,11 +340,11 @@ header {
   padding: 35px 35px 65px;
   text-align: center;
 }
-.exploration__h2 {
+.exploration__title {
   margin: 10px 0;
   padding: 0 15px;
 }
-.exploration__p {
+.exploration__text {
   font-size: 20px;
   font-weight: lighter;
   padding-bottom: 15px;
@@ -265,9 +382,7 @@ header {
     width: 33%;
   }
 }
-.fonctionnement__span {
-  position: absolute;
-  left: -10px;
+.fonctionnement__number {
   background: #9356DC;
   border-radius: 100%;
   color: white;
@@ -275,25 +390,23 @@ header {
   justify-content: center;
   align-items: center;
   height: 30px;
-  width: 30px;
   margin-right: 25px;
+  position: absolute;
+  left: -10px;
+  width: 30px;
 }
 .fonctionnement .fa-mobile-alt, .fonctionnement .fa-list-ul, .fonctionnement .fa-store {
-  flex: 0.5;
   color: grey;
+  flex: 0.5;
   font-size: 23px;
   margin-left: 45px;
 }
-.fonctionnement__strong {
+.fonctionnement__text {
   flex: 3;
   font-size: 18px;
   margin-left: 15px;
 }
 
-/* Ombre des éléments */
-/* Augmente l'assombrissement de la couleur de l'ombre au survol*/
-/* Display flex row */
-/* text ellispis */
 .restaurants {
   background: rgba(249, 249, 249, 0.482);
   padding: 40px 20px 50px;
@@ -330,11 +443,11 @@ header {
   background: #99E2D0;
   color: #278870;
   padding: 8px;
-  text-align: center;
-  width: 90px;
   position: absolute;
   top: 10px;
   right: 10px;
+  text-align: center;
+  width: 90px;
 }
 .restaurants__card-container-text {
   border-radius: 0 0 20px 20px;
@@ -350,25 +463,39 @@ header {
 .restaurants__card-text {
   flex: 1;
 }
-.restaurants__card-h3 {
+.restaurants__card-name {
   font-size: 20px;
   margin: 15px 0 0;
 }
-.restaurants__card-p {
+.restaurants__card-place {
   font-size: 20px;
   font-weight: lighter;
   margin: 8px 0;
 }
 @media (min-width: 768px) {
-  .restaurants__card-p {
+  .restaurants__card-place {
     font-size: 17px;
   }
 }
 
-/* Ombre des éléments */
-/* Augmente l'assombrissement de la couleur de l'ombre au survol*/
-/* Display flex row */
-/* text ellispis */
+@keyframes letters {
+  0% {
+    transform: scaleY(0.5);
+  }
+  100% {
+    transform: scaleY(1);
+  }
+}
+@keyframes loader-stop {
+  0% {
+    opacity: 1;
+    z-index: 1;
+  }
+  100% {
+    opacity: 0;
+    z-index: -1;
+  }
+}
 @keyframes appear-menu {
   0% {
     transform: translateY(-40px);
@@ -423,7 +550,6 @@ header {
   border-radius: 40px 40px 0 0;
   padding: 50px 20px;
   transform: translateY(-80px);
-  /* Entree Plat Dessert */
 }
 @media (min-width: 768px) {
   .section-restaurant .restaurant {
@@ -484,8 +610,6 @@ header {
   text-overflow: ellipsis;
   overflow: hidden;
   animation: appear-menu 2000ms both;
-  /* partie verte à une taille de 0% ds la carte et est deplacé de 100px sur axe horizontal à droite*/
-  /* au survol de la carte, la partie verte reprend un taille(flex8%) et sa place ds la carte(translate)*/
 }
 .section-restaurant .restaurant .flex-menu .menu-part__list__item--1 {
   animation-delay: 150ms;
@@ -550,9 +674,9 @@ header {
 }
 .section-restaurant .restaurant .flex-menu .menu-part__list__item .item-text .details {
   display: flex;
+  flex-direction: row;
   align-items: center;
   flex: 100%;
-  flex-direction: row;
   justify-content: space-between;
   margin: 0 0 0 20px;
 }
@@ -588,9 +712,9 @@ header {
   border-radius: 0 15px 15px 0;
   color: #f6f6f6;
   display: flex;
+  justify-content: center;
   align-items: center;
   flex: 0%;
-  justify-content: center;
   font-size: 30px;
   transform: translateX(100px);
   transition: all 600ms;

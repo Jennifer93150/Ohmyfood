@@ -1,18 +1,18 @@
 @import "../utils/variables";
-@import "../utils/_mixins";
+@import "../utils/mixins";
 @import "../utils/animations";
 
 .section-restaurant{
     img{
         object-fit: cover;
         width: 100%;
-        @media (min-width: map-get($map: $breakpoints, $key: tablet)){
+        @media (min-width: map-get($breakpoints, tablet)){
             height: 700px;
         }
     }
     #img-note-enchantee{
         height: 380px;
-        @media (min-width: map-get($map: $breakpoints, $key: tablet)){
+        @media (min-width: map-get($breakpoints, tablet)){
             height: 700px;
         }
     }
@@ -21,7 +21,7 @@
         border-radius: 40px 40px 0 0;
         padding: 50px 20px;
         transform: translateY(-80px);
-        @media (min-width: map-get($map: $breakpoints, $key: tablet)){
+        @media (min-width: map-get($breakpoints, tablet)){
             transform: translateY(-400px);
         }
         .restaurant-name {
@@ -35,15 +35,13 @@
                 margin: 10px 10px;
             }
         }
-        /* Entree Plat Dessert */
         .flex-menu{
-            @media (min-width: map-get($map: $breakpoints, $key: tablet)){
+            @media (min-width: map-get($breakpoints, tablet)){
                 display: flex;
                 justify-content: space-between;
-                
             }
             .menu-part{
-                @media (min-width: map-get($map: $breakpoints, $key: tablet)){
+                @media (min-width: map-get($breakpoints, tablet)){
                     width: 33%;
                 }
                 &__title{
@@ -62,7 +60,6 @@
                 &__list{
                     list-style-type: none;
                     padding-left: 0;
-                    
                     &__item{
                         background: white;
                         border-radius: 20px;
@@ -73,7 +70,6 @@
                         height: 90px;
                         margin: 18px 0;
                         @include ellipsis;
-                        //transition: all 2000ms;
                         animation: appear-menu 2000ms both;
                         @for $i from 1 through 9{
                             &--#{$i}{
@@ -83,7 +79,7 @@
                         &--10 {
                             animation-delay: 1500ms;
                         }
-                        @media (min-width: map-get($map: $breakpoints, $key: tablet)){
+                        @media (min-width: map-get($breakpoints, tablet)){
                             width: 98%;
                         }
                         .item-text {
@@ -93,10 +89,10 @@
                             font-size: 18px;
                              @include ellipsis;
                             transition: all 600ms;
-                            @media (max-width: map-get($map: $breakpoints, $key: mobile-M)){
+                            @media (max-width: map-get($breakpoints, mobile-M)){
                                 font-size: 16px;
                             }
-                            @media (max-width: map-get($map: $breakpoints, $key: mobile-S)){
+                            @media (max-width: map-get($breakpoints, mobile-S)){
                                 font-size: 15px;
                             }
                             .name {
@@ -104,10 +100,9 @@
                                 padding: 10px 20px;
                             }
                             .details {
-                                display: flex;
-                                    align-items: center;
+                                @include flex-row;
+                                    align-items: $center;
                                     flex: 100%;
-                                    flex-direction: row;
                                     justify-content: space-between;
                                 margin: 0 0 0 20px;
                                 .details__desc {
@@ -115,10 +110,10 @@
                                     font-size: 19px;
                                     font-weight: lighter;
                                     @include ellipsis;
-                                    @media (max-width: map-get($map: $breakpoints, $key: mobile-M)){
+                                    @media (max-width: map-get($breakpoints, mobile-M)){
                                         font-size: 16px;
                                     }
-                                    @media (max-width: map-get($map: $breakpoints, $key: mobile-S)){
+                                    @media (max-width: map-get($breakpoints, mobile-S)){
                                         font-size: 14px;
                                     }
                                 }
@@ -133,21 +128,17 @@
                             flex: 65%;
                             margin-right: 20px;
                         }
-                        /* partie verte à une taille de 0% ds la carte et est deplacé de 100px sur axe horizontal à droite*/
                         .item-check {
                             background-color: #99e2d0;
                             border-radius: 0 15px 15px 0;
                             color: #f6f6f6;
-                            display: flex;
-                                align-items: center;
+                            @include flex-center;
+                                align-items: $center;
                                 flex: 0%;
-                                justify-content: center;
                             font-size: 30px;
                             transform: translateX(100px);
                             transition: all 600ms;
-                            // white-space: nowrap;
                         }
-                        /* au survol de la carte, la partie verte reprend un taille(flex8%) et sa place ds la carte(translate)*/
                         &:hover > .item-check {
                             background-color: #99e2d0;
                             cursor: pointer;

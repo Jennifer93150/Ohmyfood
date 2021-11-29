@@ -1,16 +1,15 @@
 @import "../utils/variables";
 
 .localisation{
-    display: flex;
-        justify-content: center;
-        align-items: center;
+    @include flex-center;
+        align-items: $center;
     height: 70px;
     margin-top: 2px;
 
     .fa-map-marker-alt{
-        font-size: $padd-20;
+        font-size: 20px;
     }
-    &__p{
+    &__text{
         font-size: 18px;
         font-weight: bolder;
         margin-left: 18px;

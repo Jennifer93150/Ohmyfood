@@ -4,17 +4,18 @@
     background: rgb(48, 48, 48);
     color: white;
     padding: 35px 35px;
-    &__h3{
+    &__logo{
         font-size: 22px;
         font-family: 'Shrikhand', cursive;
     }
-    &__ul{
+    &__liste{
         font-size: 18px;
         line-height: 30px;
         list-style-type: none;
         padding: 0;
-    }
-    &__strong{
-        margin-left: 12px;
+        .fa-utensils, .fa-hands-helping{
+            margin-right: 12px;
+        }
     }
 }
+
