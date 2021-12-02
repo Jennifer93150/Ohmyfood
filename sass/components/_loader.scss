@@ -33,6 +33,7 @@ $anim-delay: 60ms;
              @for $i from 1 through 10 {
                  &--#{$i} {
                      animation-delay: $anim-delay * $i;
+                     /* on multiplie le delai par le nombre de la lettre (2ème, 3ème...)*/
                  }
              }
          }
